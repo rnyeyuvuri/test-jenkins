@@ -32,7 +32,7 @@ pipeline {
         }
         stage('Archive') {
             steps {
-                archiveArtifacts artifacts: 'target/*.jar', 'target/site/jacoco/**', fingerprint: true
+                archiveArtifacts artifacts: 'target/*.jar', 'target/site/jacoco/*.html', fingerprint: true
             }
         }
     }
